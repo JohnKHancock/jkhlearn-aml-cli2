@@ -1,0 +1,2 @@
+chmod u=rwx,g=r,o=r setup.sh
+./setup.sh
