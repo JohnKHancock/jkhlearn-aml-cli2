@@ -2,10 +2,10 @@
 
 # Set the necessary variables
 RESOURCE_PROVIDER="Microsoft.MachineLearning"
-RESOURCE_GROUP="rg-dp100"
+RESOURCE_GROUP="overview-rg"
 REGION="eastus"
-WORKSPACE_NAME="aml-diabetes-dev"
-COMPUTE_INSTANCE="testdev6000-vm" 
+WORKSPACE_NAME="overview-wrksp"
+COMPUTE_INSTANCE="overview-ci" 
 
 
 #Register the Azure Machine Learning resource provider in the sub
@@ -26,13 +26,7 @@ echo "Creating a compute instance with name. "
 az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance
 
 
-#Create Azure environment
-echo "Creating an environment:"
-az ml environment create --file basic-env.yml
 
-#Create the dataset
-echo "Creating the dataset"
-az ml data create --file data-local-path.yml
 
 
 
