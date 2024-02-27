@@ -2,11 +2,11 @@
 
 # Set the necessary variables
 RESOURCE_PROVIDER="Microsoft.MachineLearning"
-RESOURCE_GROUP="overview-rg"
+RESOURCE_GROUP="documentation-rg"
 REGION="eastus"
-WORKSPACE_NAME="overview-wrksp"
-COMPUTE_INSTANCE="overview-ci" 
-COMPUTE_CLUSTER = "overview-cluster"
+WORKSPACE_NAME="documentation-wrksp"
+COMPUTE_INSTANCE="documentation-ci" 
+COMPUTE_CLUSTER = "documentation-cluster"
 
 
 #Register the Azure Machine Learning resource provider in the sub
