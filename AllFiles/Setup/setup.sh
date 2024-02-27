@@ -6,6 +6,7 @@ RESOURCE_GROUP="overview-rg"
 REGION="eastus"
 WORKSPACE_NAME="overview-wrksp"
 COMPUTE_INSTANCE="overview-ci" 
+COMPUTE_CLUSTER = "overview-cluster"
 
 
 #Register the Azure Machine Learning resource provider in the sub
@@ -25,6 +26,10 @@ az configure --defaults workspace=$WORKSPACE_NAME
 echo "Creating a compute instance with name. "
 az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance
 
+
+# Create compute cluster
+echo "Creating a compute cluster with name: " $COMPUTE_CLUSTER
+az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute 
 
 
 
