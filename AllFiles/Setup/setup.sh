@@ -5,8 +5,7 @@ RESOURCE_PROVIDER="Microsoft.MachineLearning"
 RESOURCE_GROUP="documentation-rg"
 REGION="eastus"
 WORKSPACE_NAME="documentation-wrksp"
-COMPUTE_INSTANCE="documentation-ci" 
-COMPUTE_CLUSTER = "documentation-cluster"
+
 
 
 #Register the Azure Machine Learning resource provider in the sub
@@ -22,14 +21,7 @@ echo "Create an Azure Machine Learning workspace:"
 az ml workspace create --name $WORKSPACE_NAME
 az configure --defaults workspace=$WORKSPACE_NAME
 
-#Create compute instance
-echo "Creating a compute instance with name. "
-az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance
 
-
-# Create compute cluster
-echo "Creating a compute cluster with name: " $COMPUTE_CLUSTER
-az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute 
 
 
 
